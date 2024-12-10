@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Showroom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .car-container {
+            margin-top: 50px;
+        }
+        img {
+            width: 300px;
+            height: auto;
+        }
+        .price {
+            font-size: 24px;
+            color: green;
+            font-weight: bold;
+        }
+        .admin-link {
+            margin-top: 20px;
+            display: block;
+            font-size: 16px;
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Our Car Showroom</h1>
+    <div class="car-container">
+        <img src="https://via.placeholder.com/300x200.png?text=Car+Image" alt="Car">
+        <p class="price">Price: ₹<span id="car-price">0</span></p>
+    </div>
+    <a href="../admin/admin.html" class="admin-link">Go to Admin Page</a>
+
+    <script>
+        // Load the price from localStorage
+        document.getElementById("car-price").textContent = localStorage.getItem("carPrice") || "0";
+    </script>
+</body>
+</html>
